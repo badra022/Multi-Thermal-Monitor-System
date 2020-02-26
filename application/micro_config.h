@@ -23,6 +23,7 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <math.h>
 #include <util/delay.h>
 
 #define GLOBAL_INTERRUPT_ENABLE() SET_BIT(SREG,7)

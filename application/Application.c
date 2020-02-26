@@ -1,9 +1,12 @@
-/*
- * Application.c
+/**********************************************************
+ * [AUTHOR] : Ahmed mohamed
  *
- *  Created on: Jan 2, 2020
- *      Author: badra069
- */
+ * [Drivers] : ADC , LCD
+ *
+ * [DATE] : 25/2/2020
+ *
+ ***********************************************************/
+
 /*********************************************************************************
 * 									Drivers										 *
  *********************************************************************************/
@@ -17,7 +20,7 @@ int main(void)
 	/*
 	 * creating configuration structure for adc driver
 	 */
-	ADC_struct ADC_config = {AREF , INTERRUPT , F_CPU_8 };
+	ADC_struct ADC_config = {_2_56v , POLLING , F_CPU_8 };
 	/*
 	 * initiating adc driver
 	 */

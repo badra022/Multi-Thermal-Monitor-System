@@ -48,7 +48,7 @@ int main(void)
 		 * converting ADC2 channel in the ADC module and storing the
 		 * sensor reading in "Temp" variable
 		 */
-		ADC_readChannel(&ADC_config , ADC2);
+		ADC_readChannel(&ADC_config , ADC0);
 		/*
 		 * displaying that sensor reading
 		 */

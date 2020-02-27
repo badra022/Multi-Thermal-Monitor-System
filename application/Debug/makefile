@@ -32,6 +32,9 @@ endif
 LSS += \
 application.lss \
 
+FLASH_IMAGE += \
+application.hex \
+
 SIZEDUMMY += \
 sizedummy \
 
@@ -53,6 +56,12 @@ application.lss: application.elf
 	@echo 'Finished building: $@'
 	@echo ' '
 
+application.hex: application.elf
+	@echo 'Create Flash image (ihex format)'
+	-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex application.elf  "application.hex"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 sizedummy: application.elf
 	@echo 'Invoking: Print Size'
 	-avr-size --format=avr --mcu=atmega16 application.elf
@@ -61,10 +70,10 @@ sizedummy: application.elf
 
 # Other Targets
 clean:
-	-$(RM) $(ELFS)$(OBJS)$(ASM_DEPS)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(LSS)$(C_DEPS) application.elf
+	-$(RM) $(FLASH_IMAGE)$(ELFS)$(OBJS)$(ASM_DEPS)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(LSS)$(C_DEPS) application.elf
 	-@echo ' '
 
-secondary-outputs: $(LSS) $(SIZEDUMMY)
+secondary-outputs: $(LSS) $(FLASH_IMAGE) $(SIZEDUMMY)
 
 .PHONY: all clean dependents
 

@@ -20,12 +20,12 @@
 #if (LCD_BITS_MODE==4)
 #define UPPER_PORT_PINS							/* 0 1 2 3 UPPER PINS*/
 #endif
-#define RS 							4
-#define RW  						5
-#define E   						6
-#define LCD_DATA_OUT 				PORTC
-#define LCD_DATA_IN  				PINC
-#define LCD_DATA_DIR 				DDRC
+#define RS 							0
+#define RW  						1
+#define E   						2
+#define LCD_DATA_OUT 				PORTB
+#define LCD_DATA_IN  				PINB
+#define LCD_DATA_DIR 				DDRB
 #define LCD_CTRL_OUT 				PORTD
 #define LCD_CTRL_IN  				PIND
 #define LCD_CTRL_DIR 				DDRD

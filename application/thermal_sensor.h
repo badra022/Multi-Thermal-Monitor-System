@@ -10,6 +10,6 @@
 
 #include"adc.h"
 void THERMAL_conversion(void);
-extern volatile long long Temp;
+extern volatile double Temp;
 
 #endif /* THERMAL_SENSOR_H_ */

@@ -7,19 +7,22 @@ C_SRCS += \
 ../Application.c \
 ../adc.c \
 ../lcd.c \
-../thermal_sensor.c 
+../thermal_sensor.c \
+../uart.c 
 
 OBJS += \
 ./Application.o \
 ./adc.o \
 ./lcd.o \
-./thermal_sensor.o 
+./thermal_sensor.o \
+./uart.o 
 
 C_DEPS += \
 ./Application.d \
 ./adc.d \
 ./lcd.d \
-./thermal_sensor.d 
+./thermal_sensor.d \
+./uart.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

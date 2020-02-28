@@ -6,7 +6,7 @@
  */
 
 #include"thermal_sensor.h"
-volatile long long Temp;
+volatile double Temp;
 void THERMAL_conversion(void)
 {
 	Temp =((current_reading * 2.56)/1024)*100;

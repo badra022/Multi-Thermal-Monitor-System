@@ -26,9 +26,9 @@
 #define LCD_DATA_OUT 				PORTB
 #define LCD_DATA_IN  				PINB
 #define LCD_DATA_DIR 				DDRB
-#define LCD_CTRL_OUT 				PORTD
-#define LCD_CTRL_IN  				PIND
-#define LCD_CTRL_DIR 				DDRD
+#define LCD_CTRL_OUT 				PORTC
+#define LCD_CTRL_IN  				PINC
+#define LCD_CTRL_DIR 				DDRC
 /*****************************NON_MODIFIABLE STATIC CONFIG**********************************************/
 #if (LCD_BITS_MODE == 4)
 #define LCD_4_BITS_MODE

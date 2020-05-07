@@ -39,9 +39,9 @@ void LCD_sendCommand(uint8 command)
 	/*function definition*/
 	CLEAR_BIT(LCD_CTRL_OUT , RS);	/*for command mode*/
 	CLEAR_BIT(LCD_CTRL_OUT , RW);	/*for write mode*/
-	_delay_ms(1);					/*for write timing diagram*/
+	_delay_ms(5);					/*for write timing diagram*/
 	SET_BIT(LCD_CTRL_OUT , E);		/*to enable the lcd*/
-	_delay_ms(1);					/*for write timing diagram*/
+	_delay_ms(5);					/*for write timing diagram*/
 	#ifdef LCD_4_BITS_MODE
 	#ifdef UPPER_PORT_PINS
 	PUT_LOWER_IN_UPPER(LCD_DATA_OUT , command);
@@ -61,9 +61,9 @@ void LCD_sendCommand(uint8 command)
 	#else
 	LCD_DATA_OUT = command;			/*out the command variable*/
 	#endif
-	_delay_ms(1);					/*for write timing diagram*/
+	_delay_ms(5);					/*for write timing diagram*/
 	CLEAR_BIT(LCD_CTRL_OUT , E);	/*for write timing diagram*/
-	_delay_ms(1);					/*for write timing diagram*/
+	_delay_ms(5);					/*for write timing diagram*/
 }
 
 void LCD_displayCharacter(uint8 a_data)
@@ -71,9 +71,9 @@ void LCD_displayCharacter(uint8 a_data)
 	/*function definition*/
 	SET_BIT(LCD_CTRL_OUT , RS);	/*for command mode*/
 	CLEAR_BIT(LCD_CTRL_OUT , RW);	/*for write mode*/
-	_delay_ms(1);					/*for write timing diagram*/
+	_delay_ms(5);					/*for write timing diagram*/
 	SET_BIT(LCD_CTRL_OUT , E);		/*to enable the lcd*/
-	_delay_ms(1);					/*for write timing diagram*/
+	_delay_ms(5);					/*for write timing diagram*/
 	#ifdef LCD_4_BITS_MODE
 	#ifdef UPPER_PORT_PINS
 	PUT_LOWER_IN_UPPER(LCD_DATA_OUT , a_data);
@@ -93,9 +93,9 @@ void LCD_displayCharacter(uint8 a_data)
 	#else
 	LCD_DATA_OUT = a_data;			/*out the command variable*/
 	#endif
-	_delay_ms(1);					/*for write timing diagram*/
+	_delay_ms(5);					/*for write timing diagram*/
 	CLEAR_BIT(LCD_CTRL_OUT , E);	/*for write timing diagram*/
-	_delay_ms(1);					/*for write timing diagram*/
+	_delay_ms(5);					/*for write timing diagram*/
 }
 
 void LCD_displayString(uint8 * str)

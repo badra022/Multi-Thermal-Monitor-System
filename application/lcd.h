@@ -20,15 +20,15 @@
 #if (LCD_BITS_MODE==4)
 #define UPPER_PORT_PINS							/* 0 1 2 3 UPPER PINS*/
 #endif
-#define RS 							0
-#define RW  						1
-#define E   						2
-#define LCD_DATA_OUT 				PORTB
-#define LCD_DATA_IN  				PINB
-#define LCD_DATA_DIR 				DDRB
-#define LCD_CTRL_OUT 				PORTC
-#define LCD_CTRL_IN  				PINC
-#define LCD_CTRL_DIR 				DDRC
+#define RS 							PA5
+#define RW  						PA6
+#define E   						PA7
+#define LCD_DATA_OUT 				PORTC
+#define LCD_DATA_IN  				PINC
+#define LCD_DATA_DIR 				DDRC
+#define LCD_CTRL_OUT 				PORTA
+#define LCD_CTRL_IN  				PINA
+#define LCD_CTRL_DIR 				DDRA
 /*****************************NON_MODIFIABLE STATIC CONFIG**********************************************/
 #if (LCD_BITS_MODE == 4)
 #define LCD_4_BITS_MODE
